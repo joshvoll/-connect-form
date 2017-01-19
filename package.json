@@ -1,0 +1,12 @@
+{
+  "name": "connect",
+  "description": "Simple connect app with jira",
+  "author": "Josue Rodriguez",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0"
+  }
+}

@@ -1,0 +1,217 @@
+<!-- general Form -->
+<form action="/createjiraissue" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Project Name</label>
+    <input type="text" class="form-control" name="nameofproject" id="nameofproject" aria-describedby="projecthelp" placeholder="Enter the name of the project">
+    <small id="emailHelp" class="form-text text-muted">Please make sure to select a name for this application</small>
+  </div>
+  <div class="form-group">
+    <label for="requestername">Requester Name</label>
+    <input type="text" class="form-control" name="requestername" id="requestername" placeholder="Requester name">
+  </div>
+   <div class="form-group">
+    <label for="businessowner">Business owner</label>
+    <input type="text" class="form-control"  name="businessowner" id="businessowner" placeholder="Business owner">
+  </div>
+   <div class="form-group">
+    <label for="projectmanager">Project manager</label>
+    <input type="text" class="form-control"  name="projectmanager" id="projectmanager" placeholder="Project Manager">
+  </div>
+   <div class="form-group">
+    <label for="approvedby">Approved by</label>
+    <input type="text" class="form-control"  name="approvedby" id="approvedby" placeholder="approved by">
+  </div>
+  <!-- Location server -->
+   <fieldset class="form-group">
+    <legend>Location</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="location" id="toronto" value="toronto">
+        Toronto 
+      </label>
+    </div>
+    <div class="form-check">
+       <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="location" id="vancouver" value="vancouver">
+        Vancouver
+      </label>
+    </div>
+     <!-- toronto and vancouver options -->
+    <div class="form-inline">
+       <label for="torvantype">Type</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="torvantype" id="torvantype">
+          <option selected>Choose...</option>
+          <option value="toronto">VM</option>
+          <option value="vancouver">Physical</option>
+        </select>
+       <label for="torvancpu">CPU</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="torvancpu" id="torvancpu">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <label for="torvanmemory">Memory</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="torvanmemory" id="torvanmemory">
+          <option selected>Choose...</option>
+          <option value="8">8 GB</option>
+          <option value="12">12 GB</option>
+          <option value="18">18 GB</option>
+        </select>
+       <label for="approvedby">amazondisk</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazondisk" id="amazondisk">
+          <option selected>Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+     </div>
+     <!-- end of toronto and vancouver options -->
+    <div class="form-check">
+       <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="location" id="amazon" value="amazon">
+        Amazon
+      </label>
+    </div>
+    <!-- amazon options -->
+    <div class="form-inline">
+       <label for="approvedby">Region</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazonregion" id="amazonregion">
+          <option >Choose...</option>
+          <option value="toronto">Toronto</option>
+          <option value="vancouver">Vancouver</option>
+        </select>
+       <label for="approvedby">Instance Type</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazoninstance" id="amazoninstance">
+          <option >Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+       <label for="approvedby">Disk</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazondisk" id="amazondisk">
+          <option >Choose...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+     </div>
+     <!-- end of amazon options -->
+  </fieldset>
+  <!-- Additional filesystem -->
+   <div class="form-group">
+    <label for="businessowner">Additional filesystems</label>
+    <input type="text" class="form-control"  name="additionalfs" id="additionalfs" placeholder="Additional file system">
+  </div>
+  <!-- Environment -->
+  <div class="form-group">
+    <label for="environment">Environment</label>
+    <select class="form-control" id="environment" name="environment">
+      <option value="production">Production</option>
+      <option value="staging">Staging</option>
+      <option value="testing">Testing</option>
+      <option value="development">Development</option>
+    </select>
+  </div>
+  <!-- role -->
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select class="form-control" id="role" name="role">
+      <option value="webserver">Webserver</option>
+      <option value="database">Databaes</option>
+    </select>
+  </div>
+  <!-- ose -->
+  <div class="form-group">
+    <label for="os">Environment</label>
+    <select class="form-control" id="os" name="os">
+      <option value="linux">Linux</option>
+      <option value="windows">Windows</option>
+    </select>
+  </div>
+  <!-- Architecture -->
+   <div class="form-group">
+    <label for="businessowner">Architecture</label>
+    <input type="text" class="form-control"  name="architecture" id="architecture" placeholder="Architecture, ask apm">
+  </div>
+  <!-- packages -->
+   <div class="form-group">
+    <label for="businessowner">Additional packages</label>
+    <input type="text" class="form-control"  name="additionalpackages" id="additionalpackages" placeholder="Additional Packages">
+  </div>
+  <!-- cluster -->
+  <fieldset class="form-group">
+    <legend>Cluster</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="location" id="toronto" value="toronto">
+        Yes 
+      </label>
+    </div>
+    <div class="form-check">
+       <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="location" id="vancouver" value="vancouver">
+        No
+      </label>
+    </div>
+  </fieldset>
+
+  <!-- group that require ssh access -->
+  <fieldset class="form-group">
+    <legend>Groups that require SSH access</legend>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="ssh" id="sshapm" value="apm" aria-label="...">
+        <label class="form-check-label">APM</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="ssh" id="sshcoldev" value="coldev" aria-label="...">
+        <label class="form-check-label">coldev</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="ssh" id="sshdba" value="dba" aria-label="...">
+        <label class="form-check-label">dba</label>
+    </div>
+     <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="ssh" id="oracledev" value="oracle dev" aria-label="...">
+        <label class="form-check-label">oracledev</label>
+    </div>
+  </fieldset>
+  <!-- Details of the stack -->
+  <fieldset class="form-group"> 
+    <label for="torvantype">Details of the Stack</label>
+    <div class="form-inline">
+       <label for="approvedby">Database</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazonregion" id="amazonregion">
+          <option >Choose...</option>
+          <option value="oracle">Oracle</option>
+          <option value="mysql">MySQL</option>
+          <option value="MariaDB">MariaDB</option>
+        </select>
+       <label for="approvedby">Web Servers</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazoninstance" id="amazoninstance">
+          <option >Choose...</option>
+          <option value="apache">Apache</option>
+          <option value="nginx">NginX</option>
+          <option value="tomcat">Tomcat</option>
+          <option value="glassfish">Glassfish</option>
+        </select>
+       <label for="approvedby">Application Engine</label>
+        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" name="amazondisk" id="amazondisk">
+          <option >Choose...</option>
+          <option value="coldfusion">Coldfusion</option>
+          <option value="lucee">Lucee</option>
+          <option value="java">Java</option>
+          <option value="nodejs">Nodejs</option>
+        </select>
+     </div>
+     
+  </fieldset><!-- Details of the stack -->
+
+  <!-- public url -->
+  <div class="form-group">
+    <label for="businessowner">Published URL</label>
+    <input type="text" class="form-control"  name="publicurl" id="publicurl" placeholder="Published URL">
+  </div><!-- public url -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
